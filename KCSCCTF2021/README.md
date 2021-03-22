@@ -37,7 +37,7 @@ So sánh `x(`û<sub>1</sub> x G + û<sub>2</sub> x Q + r2<sup>i</sup>ŝ<sup>-1</
 
 
 ## Crypto-5 - Weird Circle
-Bài này nói về mã hóa AES bằng khóa được sinh từ một điểm thuộc [đường tròn](https://en.wikipedia.org/wiki/Edwards_curve#An_analogue_on_the_circle). Cho biết số nguyên tố p, điểm G, P = d x G, yêu cầu nhập một điểm bất kì R(x,y) thuộc đường tròn, tính Q = R + P, điểm tạo khóa được tính bằng K = secret x Q = secret x (R + P). Yêu cầu Q không phải 4 điểm (1,0), (0,1), (-1,0), (0,-1).
+Bài này nói về mã hóa AES bằng khóa được sinh từ một điểm thuộc [đường tròn](https://en.wikipedia.org/wiki/Edwards_curve#An_analogue_on_the_circle). Cho biết số nguyên tố p, điểm G, P = d x G, yêu cầu nhập một điểm bất kì R(x,y) thuộc đường tròn, tính Q = R + P, điểm tạo khóa được tính bằng K = secret x Q. Yêu cầu Q không phải 4 điểm (1,0), (0,1), (-1,0), (0,-1).
 
 **Gợi ý:** Nhập một điểm R sao cho Q có bậc n nhỏ, khóa có thể là một điểm thuộc nhóm sinh bới Q, \<Q\> = {0Q, 1Q, 2Q, ... , (n-1)Q}. Q có thể là điểm có góc là π/6, -π/4, π/3,... Như vậy phải đưa tọa độ của điểm Q về đường tròn trong **Z**<sub>p</sub>. Một điểm P(x,y) thuộc đường tròn này có điểm đối là -P = (-x,y). Điểm R cần nhập sẽ là R = Q - P.
 
