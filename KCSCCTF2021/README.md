@@ -1,9 +1,7 @@
 # Hướng giải một số thử thách Cryptography KCSC CTF 2021.
 ## Crypto 1
 Cho biết `FLAG` bắt đầu bằng 4 byte `KCSC`, một S-box 256 phần tử đóng vai trò là phép thế. Khóa có độ dài là 1 byte (vì mod 256 nên khóa thuộc đoạn [0, 255]).
-
 FLAG sẽ được biến đổi qua 256 vòng lặp, mỗi vòng thực hiện cập nhật khóa, XOR bản rõ với khóa và phép thay thế với S-box.
-
 Các biến đổi trên FLAG hoàn toàn có thể đảo ngược lại.
 
 **Gợi ý:** tạo một S-box<sup>-1</sup> ngược với S-box ban đầu, quét cạn khóa từ 0 đến 255, mỗi vòng lặp làm ngược lại với lúc mã hóa (S-box<sup>-1</sup>, XOR, cập nhật khóa).
@@ -22,8 +20,10 @@ Một server yêu cầu 2 mật khẩu khác nhau, sử dụng PBKDF2 để tạ
 
 
 ## Crypto-4
-Một server dùng thuật toán chữ ký số trên đường cong Elliptic P-256 để ký `KCSC`. Server cho phép 2 lựa chọn là `flip` 1 bit ở `index` của `private_key` và trả về chữ ký bị lỗi, `guess` `private_key`, nếu đúng sẽ trả về FLAG.
+Một server dùng thuật toán chữ ký số trên đường cong Elliptic P-256 để ký `KCSC`. Server cho phép 2 lựa chọn là `flip` 1 bit ở `index` của `private_key` (d) và trả về chữ ký bị lỗi, `guess` `private_key`, nếu đúng sẽ trả về FLAG.
 
 **Gợi ý**: [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm).
 Khi lật một bit ở thứ tự i (đếm từ 0), thu được:
-\^{s}
+(r,ŝ) với r = `x(`k x G`)`, ŝ = (z + rd ± r2<sup>i</sup>)k<sup>-1</sup> mod n.
+Tính được û<sub>1</sub> = zŝ<sup>-1</sup> mod n và û<sub>2</sub> = rŝ<sup>-1</sup> mod n.
+û<sub>1</sub> x G + û<sub>2</sub> x Q = 
