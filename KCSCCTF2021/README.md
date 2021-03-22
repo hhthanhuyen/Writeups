@@ -31,7 +31,7 @@ r = `x(`k x G`)`, ŝ = (z + rd ± r2<sup>i</sup>)k<sup>-1</sup> mod n.
 
 Tính được û<sub>1</sub> = zŝ<sup>-1</sup> mod n và û<sub>2</sub> = rŝ<sup>-1</sup> mod n.
 
-So sánh `x(`û<sub>1</sub> x G + û<sub>2</sub> x Q + r2<sup>i</sup>ŝ<sup>-1</sup> x G`)` với `r` sẽ tìm được bit thứ i của `private_key`. Phần này mình để mọi người tự chứng minh.
+So sánh `x(`û<sub>1</sub> x G + û<sub>2</sub> x Q + r2<sup>i</sup>ŝ<sup>-1</sup> x G`)` với r sẽ tìm được bit thứ i của `private_key`. Phần này mình để mọi người tự chứng minh.
 
 **Lưu ý:** Trong bài mình sử dụng `fastecdsa` P-256, mặc định dữ liệu được ký sẽ được hash bằng sha256 chứ không giữ nguyên nhé...
 
