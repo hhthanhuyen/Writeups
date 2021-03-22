@@ -44,4 +44,4 @@ Bài này nói về mã hóa AES bằng khóa được sinh từ một điểm t
 #
 Phần trên là gợi ý cho các thử thách Cryptography, các bạn có hướng giải khác hoặc writeup hoàn chỉnh có thể gửi về cho fanpage nè. Nếu có sai sót hoặc thắc mắc nào các bạn hãy phản hồi cho mình nhé.
 
-Cảm ơn các bạn đã đọc hihi.
+Cảm ơn các bạn đã đọc.
