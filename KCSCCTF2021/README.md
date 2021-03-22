@@ -8,7 +8,7 @@ Các biến đổi trên FLAG hoàn toàn có thể đảo ngược lại.
 
 
 ## Crypto 2 - Alter The Future
-Cho một RSA server thực hiện giải mã bản các mã nhận được, trả về một bit ở vị trí x của bản rõ (thứ tự tính từ 0, từ trái sang phải).
+Cho một RSA server thực hiện giải mã bản các mã nhận được, trả về một bit ở vị trí x của bản rõ (thứ tự tính từ 0).
 Cho biết n là tích của 2 số nguyên tố 1024 bit, e, `encrypted_flag`, độ dài của FLAG là 37 byte và x (x thuộc [8*len(FLAG), 1024] = [296,1024]). Đảm bảo khi gửi `encrypted_flag` server luôn trả về 0.
 
 **Gợi ý:** Độ dài của n là 2048 bit, lớn hơn nhiều độ dài của FLAG (296 bit), khôi phục FLAG bằng cách nhân bản mã `encrypted_flag` với (2<sup>i</sup>)<sup>65537</sup> sao cho bit cần tìm nằm ở vị trí x.
