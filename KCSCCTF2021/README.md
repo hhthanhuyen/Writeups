@@ -41,7 +41,7 @@ Bài này nói về mã hóa AES bằng khóa được sinh từ một điểm t
 
 **Gợi ý:** Nhập một điểm Q sao cho K có bậc n nhỏ, khóa có thể là một điểm thuộc nhóm sinh bới K, <K> = {0K, 1K, 2K, ... , (n-1)K}. K có thể là các điểm có góc là π/6, -π/4, π/3,... Như vậy phải đưa tọa độ của điểm này về đường tròn trong **Z**<sub>p</sub>. Một điểm P(x,y) có điểm đối là -P = (-x,y). Điểm Q cần nhập sẽ là Q = K - (d x G).
 
-# ***
+#
 Phần trên là gợi ý cho các thử thách Cryptography, các bạn có hướng giải khác hoặc writeup hoàn chỉnh có thể gửi về cho fanpage nè. Nếu có sai sót hoặc thắc mắc nào các bạn hãy phản hồi cho mình nhé.
 
 Cảm ơn các bạn đã đọc hihi.
