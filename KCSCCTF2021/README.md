@@ -16,6 +16,7 @@ Cho biết n là tích của 2 số nguyên tố 1024 bit, e, `encrypted_flag`, 
 
 ## Crypto 3
 Một server yêu cầu 2 mật khẩu khác nhau, sử dụng PBKDF2 để tạo khóa cho từng mật khẩu. Yêu cầu hai khóa phải giống nhau, 4 byte `KCSC` thuộc mật khẩu 1 thì server sẽ trả về một đoạn của FLAG.
+
 **Gợi ý:** [HMAC collisions](https://en.wikipedia.org/wiki/PBKDF2#HMAC_collisions), để trả về toàn bộ FLAG thì mật khẩu 2 phải bắt đầu bằng 2 byte 0000H.
 
 
