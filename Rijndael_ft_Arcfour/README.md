@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
 So, we're able to change the S-box by sending a key, the server then uses that key to perform RC4 key-scheduling algorithm (KSA) and sets the output array as the AES S-box. Choosing an S-box, we can inverse KSA and obtain a key which generates that S-box.
 
-Each AES round (except final round) is composed of four different transformations: *SubBytes*, *ShiftRows*, *MixColumns*, *AddRoundKey*. If *SubBytes* is an affine transformation, i.e. SubBytes(X) = A\*X + B, where X and B are 8 x 1 matrices, and A is a 8 x 8 matrix over GF(2), then the whole AES will become an affine transformation, which means C = AES(P) = A\*P + B, where P is a plaintext block, C is the corresponding ciphertext block, A is a 128 x 128 matrix and B is a 128 x 1 matrix.
+Each AES round (except final round) is composed of four different transformations: *SubBytes*, *ShiftRows*, *MixColumns*, *AddRoundKey*. If *SubBytes* is an affine transformation, i.e. SubBytes(X) = A\*X + B, where X and B are 8 x 1 matrices, and A is an 8 x 8 matrix over GF(2), then the whole AES will become an affine transformation, which means C = AES(P) = A\*P + B, where P is a plaintext block, C is the corresponding ciphertext block, A is an 128 x 128 matrix and B is an 128 x 1 matrix.
 
 Note that the matrix A can be generated from *SubBytes*, *ShiftRows*, *MixColumns*, none of which related to the AES key. Assume we know a pair (P, C), then B can be retrieved by B = C - A*P. Once A and B are known, we can encrypt any plaintext block or decrypt any ciphertext block (using P = A<sup>-1</sup> \* (C - B)) regardless of knowing the AES key.
 
