@@ -2,7 +2,7 @@
 
 A great challenge on my to-do list for a long time...
 
-## Challenge file:
+## Challenge file
 - [rijndael_ft_arcfour.zip](https://github.com/hhthanhuyen/Writeups/blob/main/Rijndael_ft_Arcfour/rijndael_ft_arcfour.zip)
 
 We are given a box using AES to encrypt the flag, but something looks suspicious, *"added support for custom S-box"*.
@@ -166,6 +166,6 @@ if __name__ == '__main__':
 
 ```
 
-## References:
+## References
 - Joan Daemen, Vincent Rijmen - *AES Proposal: Rijndael*
 - [Wikipedia - RC4](https://en.wikipedia.org/wiki/RC4)
