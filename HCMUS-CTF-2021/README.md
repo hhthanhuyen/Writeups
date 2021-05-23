@@ -483,11 +483,6 @@ print(permutation_power(perm, flag))
 
 Cho biết hoán vị P, và hoán vị Q = flag * P, tìm lại flag. Vậy phải tính logarit rời rạc trên nhóm các hoán vị để tìm flag.
 
-Tài liệu tham khảo:
-
-+ [Symmetric group](https://en.wikipedia.org/wiki/Symmetric_group)
-+ [Baby-step giant-step](https://en.wikipedia.org/wiki/Baby-step_giant-step)
-
 Mỗi hoán vị P có thể biểu diễn dưới dạng các chu trình rời nhau, tìm ord(P) bằng cách lấy LCM của độ dài các chu trình, do ord(P) không quá lớn nên có thể tìm được giá trị x sao cho Q = x * P với flag ≡ x (mod ord(P)).
 
 Một vấn đề khác xảy ra, ord(P) rất nhỏ so với flag, tìm flag = k*ord(P) + x (với k là một số nguyên) không khả thi. Để mở rộng modulo thì tìm thêm nhiều phương trình flag ≡ x (mod ord(P)), đưa về bài toán giải hệ phương trình đồng dư. Lưu ý các ord(P) này thường không nguyên tố cùng nhau, không thể sử dụng Chinese remainder theorem được. Có một phương pháp khác để giải quyết vấn đề này, dựa trên [answer](https://math.stackexchange.com/questions/1644677/what-to-do-if-the-modulus-is-not-coprime-in-the-chinese-remainder-theorem) của @AC.
