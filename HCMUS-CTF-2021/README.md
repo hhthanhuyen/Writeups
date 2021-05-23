@@ -6,7 +6,7 @@
 > 
 > author: pakkunandy
 > 
-> **encoded**
+> [encoded](challenges/encoded)
 
 ```
 MQZGQ3K2PFBDMYTONB4USR3YNFQUGQTJLEZUU2CJI5UGUSKHPBUWCR2VM5RW26DZLJTW6S2WKZBGCU2FLF2FKRLEKRSTA4DZLAZDK3DDNQ4VAZKXGV3WKR2OGJMVQ2DZLJLDS4LDNZWHOWLOOB4VQMTENFMDGVTXMVWWQ3KYGNBG4YZRHB4U2RCJPBTFCPJ5
@@ -32,7 +32,7 @@ HCMUS-CTF{We_are_Blackpinker_welcome_to_hcmus_ctf_2021}
 > 
 > author: pakkunandy
 >
-> **ciphertext.txt**
+> [ciphertext.txt](challenges/ciphertext.txt)
 
 ```
 r4SJmJOanoOFhMqDmcqLyp2Lk8qFjMqZiZiLh4iGg4SNyo6LnovKmYXKnoKLnsqFhIaTyoufnoKFmIOQj47KmouYnoOPmcqJi4TKn4SOj5iZnouEjsqego/Kg4SMhZiHi56DhYTEyqOEyp6PiYKEg4mLhsqej5iHmcbKg57Kg5nKnoKPypqYhYmPmZnKhYzKiYWEnI+YnoOEjcqCn4eLhMeYj4uOi4iGj8qahouDhJ6Pkp7KnoXKg4SJhYeamI+Cj4SZg4iGj8qej5KexsqLhpmFyoGEhZ2EyouZyomDmoKPmJ6Pkp6iqae/ucepvqyRnY+1gYSFnbWegouetZOFn7WJi4S1joW1mYOHmoaPtbKluLXf3tnb2dvf3ouIiYyP396LjNiPiYuIlw==
@@ -65,7 +65,7 @@ Encryption is a way of scrambling data so that only authorized parties can under
 > 
 > author: pakkunandy
 >
-> **server.py**
+> [server.py](challenges/server.py)
 
 ```python
 [...]
@@ -137,7 +137,7 @@ for i in range(15,-1,-1):
 >
 > author: pakkunandy
 >
-> **phase1.zip**
+> [phase1.zip](challenges/phase1.zip)
 
 Bài gồm 2 phase, phase 1 yêu cầu crack một password, phase 2 yêu cầu crack passphrase của một khóa RSA. Sau đó encode chuỗi bằng base64 để mở các file zip tương ứng.
 
@@ -159,7 +159,7 @@ Flag: HCMUS_CTF{cracking_for_fun}
 >
 > author: mugi
 >
-> **desx.py**
+> [desx.py](challenges/desx.py)
 
 ```python
 import os
@@ -263,7 +263,7 @@ for i in range(0,len(ct),8):
 >
 > author: mugi
 >
-> **rsb.py**
+> [rsb.py](challenges/rsb.py)
 
 ```python
 from typing import List
@@ -444,7 +444,7 @@ print(long_to_bytes(pow(f,d,n)).decode())
 > 
 > author: vuonghy2442
 > 
-> **permutation.py**
+> [permutation.py](challenges/permutation.py)
 
 ```python
 from typing import List
