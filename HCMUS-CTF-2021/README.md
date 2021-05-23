@@ -2,10 +2,8 @@
 
 ### SanityCheck
 
-> Welcome to HCMUS_-CTF 2021. We're Blackpinker.
-> 
-> author: pakkunandy
-> 
+> Welcome to HCMUS_-CTF 2021. We're Blackpinker.  
+> author: pakkunandy  
 > [encoded](challenges/encoded)
 
 ```
@@ -28,10 +26,8 @@ HCMUS-CTF{We_are_Blackpinker_welcome_to_hcmus_ctf_2021}
 
 ### SingleByte
 
-> Yup!!!! You know it!!! The very simple encryption technique that has the perfect secrecy.
-> 
-> author: pakkunandy
->
+> Yup!!!! You know it!!! The very simple encryption technique that has the perfect secrecy.  
+> author: pakkunandy  
 > [ciphertext.txt](challenges/ciphertext.txt)
 
 ```
@@ -57,14 +53,10 @@ Encryption is a way of scrambling data so that only authorized parties can under
 
 ### TheChosenOne
 
-> The cryptography technique can be good, but the implementation is bad. Do you know the weakness of AES-ECB? (Inspired from some old stuff with a little bit easier =D )
->
-> https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation
->
-> nc 61.28.237.24 30300
-> 
-> author: pakkunandy
->
+> The cryptography technique can be good, but the implementation is bad. Do you know the weakness of AES-ECB? (Inspired from some old stuff with a little bit easier =D )  
+> https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation  
+> nc 61.28.237.24 30300  
+> author: pakkunandy  
 > [server.py](challenges/server.py)
 
 ```python
@@ -76,8 +68,7 @@ plaintext = plaintext.ljust(padding_length, padding_character)
 sys.stdout.write('The ciphertext:\n{}\n\n'.format((cipher.encrypt(plaintext)).encode('hex')))
 ```
 
-Server cho phép nhập vào một chuỗi, sau đó trả về bản mã AES-ECB(pad(user_input || flag)), lưu ý mã khối ở chế độ ECB không an toàn, hai khối bản rõ giống nhau sẽ có hai khối bản mã giống nhau.
-Như vậy có thể tìm lại từng chữ của flag bằng cách so sánh hai khối, trong đó `?` là một byte dùng để brute force những chữ có thể của flag.
+Server cho phép nhập vào một chuỗi, sau đó trả về bản mã AES-ECB(pad(user_input || flag)), lưu ý mã khối ở chế độ ECB không an toàn, hai khối bản rõ giống nhau sẽ có hai khối bản mã giống nhau. Như vậy có thể tìm lại từng chữ của flag bằng cách so sánh hai khối, trong đó `?` là một byte dùng để brute force những chữ có thể của flag.
 
 ```
 1234567890123456
@@ -133,18 +124,13 @@ for i in range(15,-1,-1):
 
 ### CrackMe
 
-> There is some way to crack the hash...
->
-> author: pakkunandy
->
+> There is some way to crack the hash...  
+> author: pakkunandy  
 > [phase1.zip](challenges/phase1.zip)
 
-Bài gồm 2 phase, phase 1 yêu cầu crack một password, phase 2 yêu cầu crack passphrase của một khóa RSA. Sau đó encode chuỗi bằng base64 để mở các file zip tương ứng.
-
-Tool: *john - John the Ripper password cracker*.
-
-Phase 1: playboy123
-
+Bài gồm 2 phase, phase 1 yêu cầu crack một password, phase 2 yêu cầu crack passphrase của một khóa RSA. Sau đó encode chuỗi bằng base64 để mở các file zip tương ứng.  
+Tool: *john - John the Ripper password cracker*.  
+Phase 1: playboy123  
 Phase 2: felecity
 
 Flag: HCMUS_CTF{cracking_for_fun}
@@ -153,12 +139,9 @@ Flag: HCMUS_CTF{cracking_for_fun}
 
 ### DESX
 
-> DESX = DES10 > DES3 > DES. In other word, this is the superior encryption algorithm.
-> 
-> nc 61.28.237.24 30301
->
-> author: mugi
->
+> DESX = DES10 > DES3 > DES. In other word, this is the superior encryption algorithm.  
+> nc 61.28.237.24 30301  
+> author: mugi  
 > [desx.py](challenges/desx.py)
 
 ```python
@@ -224,10 +207,8 @@ while True:
 
 Server cho phép 2 lựa chọn, `Get encrypted flag` và `Decrypt`. Trong đó flag được mã hóa bằng DES-ECB: **C<sub>i</sub> = E<sub>k</sub>(P<sub>i</sub> XOR i1) XOR i2**, với i1 và i2 là hai block cố định, không biết giá trị và server còn cho biết khóa `k` dùng để mã hóa. `Decrypt` chỉ được giải mã một block với khóa tự chọn, và được kiểm tra để tránh block được giải mã là flag.
 
-Lưu ý DES có tính chất:
-
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://latex.codecogs.com/gif.latex?\small&space;\overline{C}&space;=&space;E_{\overline{k}}(\overline{P})" title="\small \overline{C} = E_{\overline{k}}(\overline{P})" />
-
+Lưu ý DES có tính chất:  
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://latex.codecogs.com/gif.latex?\small&space;\overline{C}&space;=&space;E_{\overline{k}}(\overline{P})" title="\small \overline{C} = E_{\overline{k}}(\overline{P})" />  
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://latex.codecogs.com/gif.latex?\small&space;\overline{P}&space;=&space;D_{\overline{k}}(\overline{C})" title="\small \overline{P} = D_{\overline{k}}(\overline{C})" />
 
 ```python
@@ -259,10 +240,8 @@ for i in range(0,len(ct),8):
 
 ### RSB
 
-> RSB > RSA nc 61.28.237.24 30302
->
-> author: mugi
->
+> RSB > RSA nc 61.28.237.24 30302  
+> author: mugi  
 > [rsb.py](challenges/rsb.py)
 
 ```python
@@ -397,16 +376,12 @@ while True:
         break
 ```
 
-Một bài về RSA-CRT Fault attack, ban đầu server gửi về giá trị của N, sau đó cho phép `Get encrypted flag`, `Encrypt` và `Decrypt`.
-
+Một bài về RSA-CRT Fault attack, ban đầu server gửi về giá trị của N, sau đó cho phép `Get encrypted flag`, `Encrypt` và `Decrypt`.  
 Thử decrypt giá trị pow(2,65537,N) thì được kết quả khác 2...
 
-Z<sup>\*</sup><sub>N</sub> ≅ Z<sup>\*</sup><sub>p</sub> x Z<sup>\*</sup><sub>q</sub> , fault attack xảy ra khi có lỗi ở Z<sup>\*</sup><sub>p</sub> hoặc Z<sup>\*</sup><sub>q</sub> .
-
-Với m < p và m < q:
-
-&nbsp;&nbsp;&nbsp;&nbsp;c<sup>d</sup> mod N = (c<sup>d</sup> mod p, c<sup>d</sup> mod q) = (c<sup>dp</sup> mod p, c<sup>dq</sup> mod q) = (m, m).
-
+Z<sup>\*</sup><sub>N</sub> ≅ Z<sup>\*</sup><sub>p</sub> x Z<sup>\*</sup><sub>q</sub> , fault attack xảy ra khi có lỗi ở Z<sup>\*</sup><sub>p</sub> hoặc Z<sup>\*</sup><sub>q</sub> .  
+Với m < p và m < q:  
+&nbsp;&nbsp;&nbsp;&nbsp;c<sup>d</sup> mod N = (c<sup>d</sup> mod p, c<sup>d</sup> mod q) = (c<sup>dp</sup> mod p, c<sup>dq</sup> mod q) = (m, m).  
 &nbsp;&nbsp;&nbsp;&nbsp;Nếu c<sup>d</sup> ≡ m (mod p) mà c<sup>d</sup> <img src="https://latex.codecogs.com/gif.latex?\small&space;\not\equiv" title="\small \not\equiv" /> m (mod q), thì p | (c<sup>d</sup> - m), do đó GCD(N, c<sup>d</sup> - m) = p.
 
 ```python
@@ -440,10 +415,8 @@ print(long_to_bytes(pow(f,d,n)).decode())
 
 ### Permutation
 
-> Playing around with permutation is fun. nc 61.28.237.24 30303
-> 
-> author: vuonghy2442
-> 
+> Playing around with permutation is fun. nc 61.28.237.24 30303  
+> author: vuonghy2442  
 > [permutation.py](challenges/permutation.py)
 
 ```python
@@ -479,8 +452,7 @@ print(perm)
 print(permutation_power(perm, flag))
 ```
 
-Đề bài cho một hoán vị của 512 phần tử, định nghĩa phép nhân vô hướng là n * Perm = Perm ∘ Perm ∘ ... ∘ Perm ∘ Perm (n lần).
-
+Bài cho một hoán vị của 512 phần tử, định nghĩa phép nhân vô hướng là n * Perm = Perm ∘ Perm ∘ ... ∘ Perm ∘ Perm (n lần).  
 Cho biết hoán vị P, và hoán vị Q = flag * P, tìm lại flag. Vậy phải tính logarit rời rạc trên nhóm các hoán vị để tìm flag.
 
 Mỗi hoán vị P có thể biểu diễn dưới dạng các chu trình rời nhau, tìm ord(P) bằng cách lấy LCM của độ dài các chu trình, do ord(P) không quá lớn nên có thể tìm được giá trị x sao cho Q = x * P với flag ≡ x (mod ord(P)).
