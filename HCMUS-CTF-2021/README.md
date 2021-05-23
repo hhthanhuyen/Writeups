@@ -207,7 +207,8 @@ while True:
 
 Server cho phép 2 lựa chọn, `Get encrypted flag` và `Decrypt`. Trong đó flag được mã hóa bằng DES-ECB: **C<sub>i</sub> = E<sub>k</sub>(P<sub>i</sub> XOR i1) XOR i2**, với i1 và i2 là hai block cố định, không biết giá trị và server còn cho biết khóa `k` dùng để mã hóa. `Decrypt` chỉ được giải mã một block với khóa tự chọn, và được kiểm tra để tránh block được giải mã là flag.
 
-Lưu ý DES có tính chất:  
+Lưu ý DES có tính chất:
+
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://latex.codecogs.com/gif.latex?\small&space;\overline{C}&space;=&space;E_{\overline{k}}(\overline{P})" title="\small \overline{C} = E_{\overline{k}}(\overline{P})" />  
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://latex.codecogs.com/gif.latex?\small&space;\overline{P}&space;=&space;D_{\overline{k}}(\overline{C})" title="\small \overline{P} = D_{\overline{k}}(\overline{C})" />
 
@@ -380,7 +381,8 @@ Một bài về RSA-CRT Fault attack, ban đầu server gửi về giá trị c�
 Thử decrypt giá trị pow(2,65537,N) thì được kết quả khác 2...
 
 Z<sup>\*</sup><sub>N</sub> ≅ Z<sup>\*</sup><sub>p</sub> x Z<sup>\*</sup><sub>q</sub> , fault attack xảy ra khi có lỗi ở Z<sup>\*</sup><sub>p</sub> hoặc Z<sup>\*</sup><sub>q</sub> .  
-Với m < p và m < q:  
+Với m < p và m < q:
+
 &nbsp;&nbsp;&nbsp;&nbsp;c<sup>d</sup> mod N = (c<sup>d</sup> mod p, c<sup>d</sup> mod q) = (c<sup>dp</sup> mod p, c<sup>dq</sup> mod q) = (m, m).  
 &nbsp;&nbsp;&nbsp;&nbsp;Nếu c<sup>d</sup> ≡ m (mod p) mà c<sup>d</sup> <img src="https://latex.codecogs.com/gif.latex?\small&space;\not\equiv" title="\small \not\equiv" /> m (mod q), thì p | (c<sup>d</sup> - m), do đó GCD(N, c<sup>d</sup> - m) = p.
 
