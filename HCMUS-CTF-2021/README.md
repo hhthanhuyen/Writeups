@@ -1,5 +1,5 @@
 
-# HCMUS-CTF 2021 Cryptography
+# HCMUS-CTF 2021 Quals Cryptography
 
 ### SanityCheck
 
