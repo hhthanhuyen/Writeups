@@ -383,7 +383,7 @@ Z<sup>\*</sup><sub>N</sub> ≅ Z<sup>\*</sup><sub>p</sub> x Z<sup>\*</sup><sub>q
 
 Với m < p và m < q:  
 &nbsp;&nbsp;&nbsp;&nbsp;c<sup>d</sup> mod N = (c<sup>d</sup> mod p, c<sup>d</sup> mod q) = (c<sup>dp</sup> mod p, c<sup>dq</sup> mod q) = (m, m).  
-&nbsp;&nbsp;&nbsp;&nbsp;Nếu c<sup>d</sup> ≡ m (mod p) mà c<sup>d</sup> <img src="https://latex.codecogs.com/gif.latex?\small&space;\not\equiv" title="\small \not\equiv" /> m (mod q), thì p | (c<sup>d</sup> - m), do đó GCD(N, c<sup>d</sup> - m) = p.
+&nbsp;&nbsp;&nbsp;&nbsp;Nếu c<sup>d</sup> ≡ m (mod p) mà c<sup>d</sup> ![equation](https://latex.codecogs.com/svg.image?\not\equiv) m (mod q), thì p | (c<sup>d</sup> - m), do đó GCD(N, c<sup>d</sup> - m) = p.
 
 ```python
 from pwn import remote
