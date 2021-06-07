@@ -1,7 +1,7 @@
 from Crypto.Util.number import isPrime, getPrime
 import random
 import math
-
+ 
 p = getPrime(512)
 q = getPrime(512)
 n = p * q
